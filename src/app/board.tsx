@@ -11,7 +11,6 @@ interface BoardListProps {
   removeBoard: (id: string) => void;
   updateSocketBoard: (boards: BoardData[]) => void;
   boardData: BoardData[];
-  setBoardData: (boards: BoardData[]) => void;
 }
 
 const Board = ({
@@ -21,7 +20,6 @@ const Board = ({
   removeBoard,
   updateSocketBoard,
   boardData,
-  setBoardData,
 }: BoardListProps) => {
   const [cardList, cards, setCards] = useDragAndDrop<
     HTMLUListElement,

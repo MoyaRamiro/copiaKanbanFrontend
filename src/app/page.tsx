@@ -5,7 +5,6 @@ import Board from "./board";
 import BoardForm from "./boardForm";
 import { io, Socket } from "socket.io-client";
 import { useDragAndDrop } from "@formkit/drag-and-drop/react";
-import { state } from "@formkit/drag-and-drop";
 
 export default function Home() {
   const socketRef = useRef<Socket | null>(null);
@@ -92,7 +91,6 @@ export default function Home() {
                     removeBoard={removeBoard}
                     updateSocketBoard={updateSocketBoard}
                     boardData={boardData}
-                    setBoardData={setBoardData}
                   />
                 </div>
               </li>
