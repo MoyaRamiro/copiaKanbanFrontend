@@ -25,11 +25,14 @@ export default function Home() {
 
   useEffect(() => {
     if (!socketRef.current) {
-      socketRef.current = io("http://localhost:3001", {
-        reconnection: true,
-        reconnectionAttempts: 5,
-        reconnectionDelay: 1000,
-      });
+      socketRef.current = io(
+        "api-trellopruebatecnica-production.up.railway.app",
+        {
+          reconnection: true,
+          reconnectionAttempts: 5,
+          reconnectionDelay: 1000,
+        }
+      );
 
       socketRef.current.on("connect", () => {
         console.log("✅ Conectado al servidor");
